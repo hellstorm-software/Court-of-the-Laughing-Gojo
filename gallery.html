@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<p style="margin-top: 10px;"> Of speakers there are 2, one is green the other blue. After reaching a higher level their thoughts were visible to us anew.</p>
+<br>
+<p>(line 5, letter 2)</p>
+<p>(line 14, letter 19)</p>
+<p>(line 19, letter 5)</p>
+<p>(line 22, letter 9)</p>
+<p>(line 3, letter 33)</p>
+<p>(line 27, letter 3)</p>
+<p>(line 31, letter 1)</p>
+<p>(line 38, letter 9)</p>
+<p>(line 6, letter 23)</p>
+
+        <div id="content" style="margin-left: 40%;">
+            <form id="codeForm" onsubmit="return checkCode()" style="margin-left: 6%;">
+                <input type="text" id="secretCode" placeholder="" required>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function checkCode() {
+            const code = document.getElementById('secretCode').value;
+            if (code === 'heddvwnad') {
+                window.location.href = 'first.html';
+            } else {
+                window.location.href = 'index.html';
+            }
+            return false; // Prevents the form from submitting normally
+        }
+    </script>
+        
+</body>
+</html>
