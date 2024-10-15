@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weird HTML Generator</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            overflow: hidden;
+        }
+        .random-element {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Randomize element creation
+        function createRandomElement() {
+            const element = document.createElement('div');
+            element.classList.add('random-element');
+
+            // Random positioning
+            element.style.top = Math.random() * window.innerHeight + 'px';
+            element.style.left = Math.random() * window.innerWidth + 'px';
+            element.style.width = Math.random() * 300 + 'px';
+            element.style.height = Math.random() * 300 + 'px';
+            element.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            element.style.transform = `rotate(${Math.random() * 360}deg)`;
+            element.style.fontSize = Math.random() * 30 + 'px';
+            element.textContent = generateRandomText();
+
+            document.body.appendChild(element);
+
+            // Add some interaction or animation
+            element.addEventListener('mouseover', () => {
+                element.style.transform = `rotate(${Math.random() * 360}deg) scale(${Math.random() * 2})`;
+                element.style.opacity = Math.random();
+            });
+        }
+
+        // Function to generate random text
+        function generateRandomText() {
+            const phrases = [
+                "The horse is laughing", "Disjointed reality", "Wasteland echoes", "Beware of the Orifice",
+                "Open the door to chaos", "Distorted truths", "Clashing colors, flickering lights",
+                "What is real is not", "Just another puzzle", "Running in circles", "404 reality not found"
+            ];
+            return phrases[Math.floor(Math.random() * phrases.length)];
+        }
+
+        // Create a random number of elements
+        function generatePage() {
+            const numElements = Math.floor(Math.random() * 20 + 10); // between 10 and 30 elements
+            for (let i = 0; i < numElements; i++) {
+                createRandomElement();
+            }
+
+            // Randomly change the background every few seconds
+            setInterval(() => {
+                document.body.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 10%)`;
+            }, 3000);
+        }
+
+        window.onload = generatePage;
+    </script>
+</body>
+</html>
