@@ -1,7 +1,6 @@
-/* how did you even get in here? */
 body {
-    background-color: #333;
-    color: #ccc; 
+    background-color: #333; /* Dark gray background */
+    color: #ccc; /* Light gray text */
     font-family: "Courier New", Courier, monospace;
     margin: 0;
     padding: 0;
@@ -13,13 +12,13 @@ body {
     margin: 0 auto;
 	height: 400px;
     padding: 20px;
-    border: 2px solid #666;
+    border: 2px solid #666; /* Gray border to mimic old website style */
 }
 
 header h1 {
     font-size: 3em;
     margin-bottom: 20px;
-    color: #ff6666; 
+    color: #ff6666; /* Light red to stand out */
     text-shadow: 2px 2px 5px #000;
 }
 
@@ -34,7 +33,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #00ff00;
+    color: #00ff00; /* Bright green links */
     text-decoration: none;
     font-weight: bold;
 }
@@ -154,4 +153,9 @@ footer {
     height: 86px;
     line-height: 88px;
   }
+}
+
+.gallery img {
+	max-width: 300px;
+	max-height: auto;
 }

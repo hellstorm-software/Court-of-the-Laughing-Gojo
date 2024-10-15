@@ -10,44 +10,44 @@ function shuffleArray(array) {
 // Function to load images into the gallery
 function loadImages() {
     const gallery = document.querySelector('.gallery');
+
+    // Define images and their corresponding links
     const imageList = [
-        'https://www.lhohq.info/graphics/graphic1b.jpg',
-        'http://www.lhohq.info/going-it-alone/PACKETWRENCH.jpg',
-        'https://www.lhohq.info/cinema/projector_icon.gif',
-        'image4.jpg',
-        'image5.jpg',
-        'image6.jpg',
-        'image7.jpg',
-        'image8.jpg',
-        'image9.jpg',
-        'image10.jpg',
-        'image11.jpg',
-        'image12.jpg',
-        'image13.jpg',
-        'image14.jpg',
-        'image15.jpg',
-        'image16.jpg',
-        'image17.jpg',
-        'image18.jpg',
-        'image19.jpg',
-        'image20.jpg',
-        'image21.jpg',
-        'image22.jpg',
-        'image23.jpg',
-        'image24.jpg',
-        'image25.jpg', 
+        { src: 'https://www.lhohq.info/graphics/graphic1b.jpg', link: 'index.html' },
+        { src: 'http://www.lhohq.info/going-it-alone/PACKETWRENCH.jpg', link: 'index.html' },
+        { src: 'https://www.lhohq.info/cinema/projector_icon.gif', link: 'index.html' },
+        { src: 'https://www.lhohq.info/graphics/alice_toms_new_car_television_home_dildo.gif', link: 'index.html' },
+        { src: 'https://www.lhohq.info/busch_foto/smoke_xxx_chemtrail.gif', link: 'weepingWalksAlone.html' },
+        { src: 'https://www.lhohq.info/busch_foto/high-profile-resignations.png', link: 'index.html' },
+        { src: 'https://www.lhohq.info/container/how_to_steal_an_election.html', link: 'index.html' },
+        { src: 'https://www.lhohq.info/container/multiplepersonalitydisorder.gif', link: 'index.html' },
+        { src: 'https://www.lhohq.info/insider_trading/octomom-makeover-lawsuit.png', link: 'index.html' },
+        { src: 'https://www.lhohq.info/this_is_money/traffic_shaping_dpi.gif', link: 'index.html' },
+        { src: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/377f5963-a0e7-42e6-bc1b-f75b3d931793/dfty9qt-9b456b2e-87bb-4028-a41a-37fb731cd423.jpg/v1/fit/w_375,h_484,q_70,strp/scanbeth_by_maxmasuttidrawing_dfty9qt-375w.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTY1MiIsInBhdGgiOiJcL2ZcLzM3N2YzOTYzLWEwZTctNDJlNi1iYzFiLWY3NWIzZDkzMTc5M1wvZGZ0eTlxdC05YjQ1NmIyZS04N2JiLTQwMjgtYTQxYS0zN2ZiNzMxY2Q0MjMuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.NHvAdOYw2cMqJYQwzhuNSGKNEIsjy47I9vJnNI8h_3Q', link: 'index.html' },
+        { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB5tV8h8EOZ3PMmN4Z6ogJF_fMKt7cnHJ4pA&s', link: 'index.html' },
+        { src: 'https://vapor95.com/cdn/shop/articles/ARTIST_SPOTLIGHT_Hysterical_Meloncholy.jpg?v=1718134326', link: 'index.html' },
+        { src: 'https://freight.cargo.site/i/b3985274bc8c0ba056c16b860dbfeed09542ba4569ec2177733bbf54946a4916/9082fcac9ad9d19894a0869ddbe752f7.png', link: 'index.html' },
+        { src: 'https://piratesoftware.wiki/w/images/piratesoftware/0/0b/Thor.png', link: 'index.html' },
+        { src: 'image12.jpg', link: 'index.html' },
+        { src: 'image12.jpg', link: 'index.html' },
+        { src: 'image12.jpg', link: 'index.html' },
     ];
 
-    // Shuffle images for random display
+
     const shuffledImages = shuffleArray(imageList);
-    shuffledImages.forEach(image => {
+    shuffledImages.forEach(item => {
+        const anchor = document.createElement('a');
+        anchor.href = item.link;
+
         const img = document.createElement('img');
-        img.src = image;
-        gallery.appendChild(img);
+        img.src = item.src;
+        anchor.appendChild(img);
+
+        gallery.appendChild(anchor); 
     });
 }
 
-// Load images when the page loads
+
 window.onload = function() {
     loadImages();
 };
