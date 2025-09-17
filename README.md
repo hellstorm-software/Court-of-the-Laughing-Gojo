@@ -2,6 +2,7 @@ This is a puzzle game. Things will be weird, puzzles will be hard, there are rew
 			Nothing from this point forward will make sense. We will not guide you. You must make the discovery for yourself.
 
 https://hellstorm-software.github.io/Court-of-the-Laughing-Gojo
+
 ---------------------------------------------------------------
 <b>Status: Puzzle is still in development.</b>
 ---------------------------------------------------------------
